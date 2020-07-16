@@ -1,6 +1,7 @@
 declare module "native-base" {
 	import * as React from "react";
 	import * as ReactNative from "react-native";
+	import * as RNPicker from "@react-native-community/picker";
 	import { KeyboardAwareScrollViewProps } from "react-native-keyboard-aware-scroll-view";
 
 	type RnViewStyleProp = ReactNative.StyleProp<ReactNative.ViewStyle>;
@@ -23,7 +24,7 @@ declare module "native-base" {
 			padder?: boolean;
 		}
 
-		interface Picker extends ReactNative.PickerProps, Testable {
+		interface Picker extends RNPicker.PickerProps, Testable {
 			mode?: "dialog" | "dropdown";
 			supportedOrientations?: "portrait" | "landscape"
 			iosHeader?: string;
@@ -290,10 +291,10 @@ declare module "native-base" {
 			/**
              * Array of data chunks to render iteratively.
              */
-      dataArray?: Array<any>;
-      renderItem?: (	
-				item: any,	
-				index: string | number,	
+			dataArray?: Array<any>;
+			renderItem?: (
+				item: any,
+				index: string | number,
 			) => React.ReactElement<any>;
 			renderRow?: (
 				rowData: any,
@@ -304,8 +305,8 @@ declare module "native-base" {
 			dataSource?: ReactNative.ListViewDataSource;
 			disableLeftSwipe?: boolean;
 			disableRightSwipe?: boolean;
-      rightOpenValue?: number;
-      keyExtractor?: (item: any, index: number) => string;
+			rightOpenValue?: number;
+			keyExtractor?: (item: any, index: number) => string;
 			leftOpenValue?: number;
 			renderRightHiddenRow?: (
 				rowData: any,
@@ -782,7 +783,7 @@ declare module "native-base" {
 			springTension?: number;
 			springFriction?: number;
 			onChangeTab?: Function;
-			onScroll?:Function;
+			onScroll?: Function;
 			page?: number;
 			locked?: boolean;
 			initialPage?: number;
@@ -1169,10 +1170,10 @@ declare module "native-base" {
 	export class ActionSheet {
 		static show: (
 			configuration: {
-				options: string[] | Array<{ 
-					text: string, 
-					icon?: string, 
-					iconColor?: string, 
+				options: string[] | Array<{
+					text: string,
+					icon?: string,
+					iconColor?: string,
 					iconType?: "AntDesign" | "Entypo" | "EvilIcons" | "Feather" | "FontAwesome" | "FontAwesome5" | "Foundation" | "Ionicons" | "MaterialCommunityIcons" | "MaterialIcons" | "Octicons" | "SimpleLineIcons" | "Zocial",
 				}>;
 				cancelButtonIndex?: number;
