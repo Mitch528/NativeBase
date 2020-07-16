@@ -16,7 +16,6 @@
     "compile": "rm -rf dist/* && babel . --out-dir dist --ignore node_modules,dist --source-maps ",
     "lint": "eslint \"src/**/*.{js, json}\"",
     "transpile": "npm run compile && cp src/basic/Icon/NBIcons.json dist/src/basic/Icon",
-    "prepublish": "npm run transpile",
     "postinstall": "node addEjectScript.js && opencollective-postinstall",
     "flow": "flow"
   },
@@ -83,10 +82,6 @@
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GeekyAnts/NativeBase.git"
-  },
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/NativeBase"
+    "url": "git+https://github.com/Mitch528/NativeBase.git"
   }
 }
